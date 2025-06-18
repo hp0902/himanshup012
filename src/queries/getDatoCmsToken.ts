@@ -9,11 +9,11 @@ export const getDatoCmsToken = (): string => {
     case 'production':
       return process.env.REACT_APP_DATOCMS_PROD_TOKEN ?? '';
 
-    case 'staging':
-      return process.env.REACT_APP_DATOCMS_STAGING_TOKEN ?? '';
+  //  case 'staging':
+     // return process.env.REACT_APP_DATOCMS_STAGING_TOKEN ?? '';
 
-    case 'development':
-      return process.env.REACT_APP_DATOCMS_DEV_TOKEN ?? '';
+   // case 'development':
+    //  return process.env.REACT_APP_DATOCMS_DEV_TOKEN ?? '';
 
     default:
       throw new Error(`No DatoCMS token configured for environment: ${environment}`);
