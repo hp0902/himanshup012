@@ -8,9 +8,7 @@ import './WorkExperience.css';
 import { TimelineItem } from '../types';
 import { getTimeline } from '../queries/getTimeline';
 
-
 const WorkExperience: React.FC = () => {
-
   const [timeLineData, setTimeLineData] = useState<TimelineItem[] | null>(null);
 
   useEffect(() => {
@@ -21,9 +19,8 @@ const WorkExperience: React.FC = () => {
     fetchTimelineItem();
   }, []);
 
-
   if (!timeLineData) return <div>Loading...</div>;
-  console.log("🚀 ~ timeLineData:", timeLineData)
+  console.log("🚀 ~ timeLineData:", timeLineData);
 
   return (
     <>
@@ -71,6 +68,66 @@ const WorkExperience: React.FC = () => {
             )}
           </VerticalTimelineElement>
         ))}
+        {/* Add Himanshu Patel's Work Experience Timeline Entries */}
+        <VerticalTimelineElement
+          date="03/2021 - Current"
+          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+          icon={<WorkIcon />}
+        >
+          <h3 className="vertical-timeline-element-title">Technical Product Manager</h3>
+          <h4 className="vertical-timeline-element-subtitle">Old Dominion University</h4>
+          <p className="vertical-timeline-element-tech">Enterprise IoT, Agile, Scalable Solutions</p>
+          <p>
+            • Designed and implemented scalable enterprise IoT solutions supporting 55,000+ users annually. <br />
+            • Led cross-functional teams using SAFe methodology to improve user experience and streamline operations. <br />
+            • Directed the development of high-performance system architectures, ensuring scalability and efficiency. <br />
+            • Spearheaded CI/CD pipeline integrations, reducing development cycles by 25%.
+          </p>
+        </VerticalTimelineElement>
+
+        <VerticalTimelineElement
+          date="09/2019 - 03/2023"
+          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+          icon={<WorkIcon />}
+        >
+          <h3 className="vertical-timeline-element-title">Product Owner/Manager of Network and IoT Applications</h3>
+          <h4 className="vertical-timeline-element-subtitle">Old Dominion University</h4>
+          <p className="vertical-timeline-element-tech">IoT, Agile, Team Leadership</p>
+          <p>
+            • Managed a team of 15+ to deliver IoT projects on time and within budget. <br />
+            • Led enterprise application integration, deploying patches for 15,000 devices, increasing security by 42%. <br />
+            • Transformed data insights into customer-focused IoT products, enhancing system security and user experience.
+          </p>
+        </VerticalTimelineElement>
+
+        <VerticalTimelineElement
+          date="09/2016 - 09/2019"
+          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+          icon={<WorkIcon />}
+        >
+          <h3 className="vertical-timeline-element-title">Lead Converged Technology Engineer</h3>
+          <h4 className="vertical-timeline-element-subtitle">Old Dominion University</h4>
+          <p className="vertical-timeline-element-tech">IoT, Agile, Cross-functional Teams</p>
+          <p>
+            • Led IoT product development, improving security by 42% across 15,000 devices. <br />
+            • Managed multi-team sprints to prioritize needs, set milestones, and enhance security.
+          </p>
+        </VerticalTimelineElement>
+
+        <VerticalTimelineElement
+          date="12/2014 - 09/2016"
+          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+          icon={<WorkIcon />}
+        >
+          <h3 className="vertical-timeline-element-title">Systems Administrator</h3>
+          <h4 className="vertical-timeline-element-subtitle">Old Dominion University</h4>
+          <p className="vertical-timeline-element-tech">CS-Gold, BASIS, IPVS, System Automation</p>
+          <p>
+            • Managed CS-Gold and BASIS systems, improving uptime by 25%. <br />
+            • Automated tasks, increasing efficiency by 70%, while ensuring 24/7 system availability.
+          </p>
+        </VerticalTimelineElement>
+
         <VerticalTimelineElement
           iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
           icon={<StarIcon />}
