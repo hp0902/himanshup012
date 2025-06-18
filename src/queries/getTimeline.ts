@@ -5,7 +5,7 @@ const GET_TIMELINE = `
 query MyQuery {
   allAlltimelines(orderBy: _createdAt_ASC) {
     name
-    timelineType
+    timelinetype
     title
     techstack
     summarypoints
