@@ -4,7 +4,7 @@ import { WorkPermit } from '../types';
 
 const GET_WORK_PERMIT = `
   query MyQuery {
-  workpermit {
+  workPermit {
     visastatus
     expirydate
     summary
@@ -13,7 +13,7 @@ const GET_WORK_PERMIT = `
 }
 `;
 
-export async function getWorkPermit(): Promise<workpermit> {
-  const data = await datoCMSClient.request<{ workpermit: workpermit }>(GET_WORK_PERMIT);
-  return data.workpermit;
+export async function getWorkPermit(): Promise<WorkPermit> {
+  const data = await datoCMSClient.request<{ WorkPermit: WorkPermit }>(GET_WORK_PERMIT);
+  return data.WorkPermit;
 }
