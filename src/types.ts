@@ -29,7 +29,7 @@ export interface TimelineItem {
 export interface Project {
   title: string;
   description: string;
-  techUsed: string;
+  techused: string;
   image: { url: string };
 }
 
