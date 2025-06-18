@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './WorkPermit.css';
 import { getWorkPermit } from '../queries/getWorkPermit';
-import { workpermit as IWorkPermit } from '../types';
+import { workPermit as IWorkPermit } from '../types';
 const WorkPermit: React.FC = () => {
 
   const [workPermitData, setWorkPermitData] = useState<IWorkPermit | null>(null);
