@@ -28,52 +28,49 @@ const WorkExperience: React.FC = () => {
         <h2 className="timeline-title">📅 Work Experience & Education Timeline</h2>
       </div>
       <VerticalTimeline>
-        {timeLineData.map((item, index) => {
-          return (
-            <VerticalTimelineElement
-              key={index}
-              className={`vertical-timeline-element--${item.timelinetype}`}
-              contentStyle={
-                item.timelinetype === "work"
-                  ? index === 0
-                    ? { background: 'rgb(33, 150, 243)', color: '#fff' }
-                    : { background: 'rgb(240, 240, 240)', color: '#fff' }
-                  : { background: 'rgb(255, 224, 230)', color: '#fff' } // Lighter red for education
-              }
-              contentArrowStyle={
-                item.timelinetype === "work"
-                  ? { borderRight: index === 0 ? '7px solid rgb(33, 150, 243)' : '7px solid rgb(240, 240, 240)' }
-                  : { borderRight: '7px solid rgb(255, 224, 230)' }
-              }
-              date={item.daterange}  {/* Ensure 'date' is correctly passed */}
-              iconStyle={
-                item.timelinetype === "work"
+        {timeLineData.map((item, index) => (
+          <VerticalTimelineElement
+            key={index}
+            className={`vertical-timeline-element--${item.timelinetype}`}
+            contentStyle={
+              item.timelinetype === "work"
+                ? index === 0
                   ? { background: 'rgb(33, 150, 243)', color: '#fff' }
-                  : { background: 'rgb(255, 160, 200)', color: '#fff' } // Softer red for education icon
-              }
-              icon={item.timelinetype === "work" ? <WorkIcon /> : <SchoolIcon />}
-            >
-              {item.timelinetype === "work" ? (
-                <div style={{ color: 'black' }}>
-                  <h3 className="vertical-timeline-element-title">{item.title}</h3>
-                  <h4 className="vertical-timeline-element-subtitle">{item.name}</h4>
-                  <p className="vertical-timeline-element-tech">🔧 {item.techstack}</p>
-                  <p>{item.summarypoints}</p>
-                </div>
-              ) : (
-                <div style={{ color: 'black' }}>
-                  <h3 className="vertical-timeline-element-title">{item.name}</h3>
-                  <h4 className="vertical-timeline-element-subtitle">{item.title}</h4>
-                  <p>{item.summarypoints}</p>
-                </div>
-              )}
-            </VerticalTimelineElement>
-          );
-        })}
-
-        {/* Add Himanshu Patel's Work Experience Timeline Entries with Explicit Dates */}
+                  : { background: 'rgb(240, 240, 240)', color: '#fff' }
+                : { background: 'rgb(255, 224, 230)', color: '#fff' } // Lighter red for education
+            }
+            contentArrowStyle={
+              item.timelinetype === "work"
+                ? { borderRight: index === 0 ? '7px solid rgb(33, 150, 243)' : '7px solid rgb(240, 240, 240)' }
+                : { borderRight: '7px solid rgb(255, 224, 230)' }
+            }
+            date={item.daterange}
+            iconStyle={
+              item.timelinetype === "work"
+                ? { background: 'rgb(33, 150, 243)', color: '#fff' }
+                : { background: 'rgb(255, 160, 200)', color: '#fff' } // Softer red for education icon
+            }
+            icon={item.timelinetype === "work" ? <WorkIcon /> : <SchoolIcon />}
+          >
+            {item.timelinetype === "work" ? (
+              <div style={{ color: 'black' }}>
+                <h3 className="vertical-timeline-element-title">{item.title}</h3>
+                <h4 className="vertical-timeline-element-subtitle">{item.name}</h4>
+                <p className="vertical-timeline-element-tech">🔧 {item.techstack}</p>
+                <p>{item.summarypoints}</p>
+              </div>
+            ) : (
+              <div style={{ color: 'black' }}>
+                <h3 className="vertical-timeline-element-title">{item.name}</h3>
+                <h4 className="vertical-timeline-element-subtitle">{item.title}</h4>
+                <p>{item.summarypoints}</p>
+              </div>
+            )}
+          </VerticalTimelineElement>
+        ))}
+        {/* Add Himanshu Patel's Work Experience Timeline Entries */}
         <VerticalTimelineElement
-          date="03/2021 - Current"  {/* Ensure date is explicitly set here */}
+          date="03/2021 - Current"
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
           icon={<WorkIcon />}
         >
@@ -89,7 +86,7 @@ const WorkExperience: React.FC = () => {
         </VerticalTimelineElement>
 
         <VerticalTimelineElement
-          date="09/2019 - 03/2023"  {/* Ensure date is explicitly set here */}
+          date="09/2019 - 03/2023"
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
           icon={<WorkIcon />}
         >
@@ -104,7 +101,7 @@ const WorkExperience: React.FC = () => {
         </VerticalTimelineElement>
 
         <VerticalTimelineElement
-          date="09/2016 - 09/2019"  {/* Ensure date is explicitly set here */}
+          date="09/2016 - 09/2019"
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
           icon={<WorkIcon />}
         >
@@ -118,7 +115,7 @@ const WorkExperience: React.FC = () => {
         </VerticalTimelineElement>
 
         <VerticalTimelineElement
-          date="12/2014 - 09/2016"  {/* Ensure date is explicitly set here */}
+          date="12/2014 - 09/2016"
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
           icon={<WorkIcon />}
         >
