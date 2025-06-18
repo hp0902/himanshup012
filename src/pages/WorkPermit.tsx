@@ -22,7 +22,7 @@ const WorkPermit: React.FC = () => {
         <p className="work-permit-summary">
           I'm a US Citizen 🌟
         </p>
-        <p className="additional-info">{workPermitData.additionalinfo}</p>
+        <p className="additional-info">{workPermitData.additionalInfo}</p>
       </div>
     </div>
   );
