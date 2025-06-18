@@ -16,6 +16,12 @@ query MyQuery {
 
 
 export async function getTimeline(): Promise<TimelineItem[]> {
-  const data = await datoCMSClient.request<{ allAlltimelines: TimelineItem[] }>(GET_TIMELINE);
-  return data.allAlltimelines;
+  try {
+    const data = await datoCMSClient.request<{ allTimelines: TimelineItem[] }>(GET_TIMELINE);
+    console.log('Timeline Data:', data.allTimelines);  // Log the data for debugging
+    return data.allTimelines;
+  } catch (error) {
+    console.error('Error fetching timeline:', error);
+    return [];
+  }
 }
