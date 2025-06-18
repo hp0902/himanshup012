@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import './Skills.css';
 import { getSkills } from '../queries/getSkills';
-
 import { FaReact, FaNodeJs, FaAws, FaDocker, FaGitAlt, FaJava, FaDatabase, FaCode, FaLaptop, FaChartLine, FaBuilding, FaUsers, FaCogs, FaBullseye, FaTasks } from 'react-icons/fa';
 import { SiRubyonrails, SiTypescript, SiPostgresql, SiMysql, SiKubernetes, SiGooglecloud, SiSpringboot, SiPhp, SiNetlify, SiHeroku, SiHtml5, SiCss3, SiRabbitmq, SiImessage } from 'react-icons/si';
 import { Skill } from '../types';
+
+// Custom logos (e.g., Oracle, AutoCAD, etc.)
+import oracleLogo from '../assets/oracle-logo.png';
+import mssqlLogo from '../assets/mssql-logo.png';
+import phpLogo from '../assets/php-logo.png';
+import autocadLogo from '../assets/autocad-logo.png';
+import revitLogo from '../assets/revit-logo.png';
 
 const iconMap: { [key: string]: JSX.Element } = {
   SiRubyonrails: <SiRubyonrails />,
@@ -32,11 +38,16 @@ const iconMap: { [key: string]: JSX.Element } = {
   FaUsers: <FaUsers />,
   FaCogs: <FaCogs />,
   FaBullseye: <FaBullseye />,
-  FaTasks: <FaTasks />
+  FaTasks: <FaTasks />,
+  // Custom logos
+//  oracleLogo: <img src={oracleLogo} alt="Oracle Logo" style={{ width: '40px', height: '40px' }} />,
+//  mssqlLogo: <img src={mssqlLogo} alt="MSSQL Logo" style={{ width: '40px', height: '40px' }} />,
+ // phpLogo: <img src={phpLogo} alt="PHP Logo" style={{ width: '40px', height: '40px' }} />,
+  //autocadLogo: <img src={autocadLogo} alt="AutoCAD Logo" style={{ width: '40px', height: '40px' }} />,
+  //revitLogo: <img src={revitLogo} alt="Revit Logo" style={{ width: '40px', height: '40px' }} />,
 };
 
 const Skills: React.FC = () => {
-
   const [skillsData, setSkillsData] = useState<Skill[]>([]);
 
   useEffect(() => {
@@ -64,14 +75,11 @@ const Skills: React.FC = () => {
           <div className="skills-grid">
             {skillsByCategory[category].map((skill: any, idx: number) => (
               <div key={idx} className="skill-card">
-                <div className="icon">{iconMap[skill.icon] || <FaReact />}</div>
-                <h3 className="skill-name">
-                  {skill.name.split('').map((letter: any, i: number) => (
-                    <span key={i} className="letter" style={{ animationDelay: `${i * 0.05}s` }}>
-                      {letter}
-                    </span>
-                  ))}
-                </h3>
+                <div className="icon">
+                  {/* Render custom logo or icon */}
+                  {iconMap[skill.icon] || <FaTasks />} {/* Default fallback icon */}
+                </div>
+                <h3 className="skill-name">{skill.name}</h3>
                 <p className="skill-description">{skill.description}</p>
               </div>
             ))}
