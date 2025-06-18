@@ -36,7 +36,7 @@ export interface Project {
 export interface Certification {
   title: string;
   issuer: string;
-  issuedDate: string;
+  issueddate: string;
   link: string;
   iconName: string;
 }
