@@ -44,7 +44,7 @@ const WorkExperience: React.FC = () => {
                 ? { borderRight: index === 0 ? '7px solid rgb(33, 150, 243)' : '7px solid rgb(240, 240, 240)' }
                 : { borderRight: '7px solid rgb(255, 224, 230)' }
             }
-            date={item.daterange}
+            date={item.daterange}  {/* Ensure 'date' is correctly passed */}
             iconStyle={
               item.timelinetype === "work"
                 ? { background: 'rgb(33, 150, 243)', color: '#fff' }
@@ -68,9 +68,10 @@ const WorkExperience: React.FC = () => {
             )}
           </VerticalTimelineElement>
         ))}
-        {/* Add Himanshu Patel's Work Experience Timeline Entries */}
+
+        {/* Add Himanshu Patel's Work Experience Timeline Entries with Explicit Dates */}
         <VerticalTimelineElement
-          date="03/2021 - Current"
+          date="03/2021 - Current"  {/* Ensure date is explicitly set here */}
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
           icon={<WorkIcon />}
         >
@@ -86,7 +87,7 @@ const WorkExperience: React.FC = () => {
         </VerticalTimelineElement>
 
         <VerticalTimelineElement
-          date="09/2019 - 03/2023"
+          date="09/2019 - 03/2023"  {/* Ensure date is explicitly set here */}
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
           icon={<WorkIcon />}
         >
@@ -101,7 +102,7 @@ const WorkExperience: React.FC = () => {
         </VerticalTimelineElement>
 
         <VerticalTimelineElement
-          date="09/2016 - 09/2019"
+          date="09/2016 - 09/2019"  {/* Ensure date is explicitly set here */}
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
           icon={<WorkIcon />}
         >
@@ -115,7 +116,7 @@ const WorkExperience: React.FC = () => {
         </VerticalTimelineElement>
 
         <VerticalTimelineElement
-          date="12/2014 - 09/2016"
+          date="12/2014 - 09/2016"  {/* Ensure date is explicitly set here */}
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
           icon={<WorkIcon />}
         >
