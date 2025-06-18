@@ -33,9 +33,9 @@ export const getDatoCmsToken = (): string => {
    case 'staging':
       token = process.env.REACT_APP_DATOCMS_STAGING_TOKEN ?? ''; // Use staging token
       break;
- //   case 'development':
-  //    token = process.env.REACT_APP_DATOCMS_DEV_TOKEN ?? ''; // Use development token
-   //   break;
+   case 'development':
+     token = process.env.REACT_APP_DATOCMS_DEV_TOKEN ?? ''; // Use development token
+     break;
     default:
       throw new Error(`No DatoCMS token configured for environment: ${environment}`);
   }
