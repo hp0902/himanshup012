@@ -23,7 +23,7 @@ export interface TimelineItem {
   title: string;
   techStack: string;
   summaryPoints: string[];
-  dateRange: string;
+  daterange: string;
 }
 
 export interface Project {
