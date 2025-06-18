@@ -11,7 +11,7 @@ const getProfileBanner = async () => {
         resumeLink {
           url
         }
-        linkedinlink
+        linkedinLink
         profileSummary
       }
     }
