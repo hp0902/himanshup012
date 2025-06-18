@@ -19,25 +19,29 @@
     //  throw new Error(`No DatoCMS token configured for environment: ${environment}`);
   //}
 //};
+// getDatoCmsToken.ts
+
 export const getDatoCmsToken = (): string => {
-  // Use a custom environment variable to determine the environment
-  const environment = process.env.REACT_APP_ENV || 'development';  // Default to 'development' if not set
+  // Use a custom environment variable to determine the environment (prod, staging, dev)
+  const environment = process.env.REACT_APP_ENV || 'development'; // Default to 'development' if not set
 
   let token = '';
   switch (environment) {
     case 'production':
-      token = process.env.REACT_APP_DATOCMS_PROD_TOKEN ?? '';
+      token = process.env.REACT_APP_DATOCMS_PROD_TOKEN ?? ''; // Use production token
       break;
     case 'staging':
-      token = process.env.REACT_APP_DATOCMS_STAGING_TOKEN ?? '';
+      token = process.env.REACT_APP_DATOCMS_STAGING_TOKEN ?? ''; // Use staging token
       break;
     case 'development':
-      token = process.env.REACT_APP_DATOCMS_DEV_TOKEN ?? '';
+      token = process.env.REACT_APP_DATOCMS_DEV_TOKEN ?? ''; // Use development token
       break;
     default:
       throw new Error(`No DatoCMS token configured for environment: ${environment}`);
   }
 
-  console.log('DatoCMS Token:', token);  // Log token for debugging
+  // Log the environment and token for debugging purposes (optional)
+  console.log(`Using ${environment} environment, token: ${token}`);
+
   return token;
 };
