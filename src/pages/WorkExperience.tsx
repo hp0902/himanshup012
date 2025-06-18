@@ -19,7 +19,7 @@ const WorkExperience: React.FC = () => {
     fetchTimelineItem();
   }, []);
 
-  if (!timeLineData) return <div>Loading...</div>;
+  if (!timeLineData) return <div>Loading</div>;
   console.log("🚀 ~ timeLineData:", timeLineData);
 
   return (
