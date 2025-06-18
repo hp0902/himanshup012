@@ -20,7 +20,8 @@
   //}
 //};
 export const getDatoCmsToken = (): string => {
-  const environment = process.env.NODE_ENV || 'development';
+  // Use a custom environment variable to determine the environment
+  const environment = process.env.REACT_APP_ENV || 'development';  // Default to 'development' if not set
 
   let token = '';
   switch (environment) {
