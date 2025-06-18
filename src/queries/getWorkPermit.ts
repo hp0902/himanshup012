@@ -1,6 +1,6 @@
 // queries/getWorkPermit.ts
 import datoCMSClient from './datoCMSClient';
-import { workPermit } from '../types';
+import { WorkPermit } from '../types';
 
 const GET_WORK_PERMIT = `
   query MyQuery {
