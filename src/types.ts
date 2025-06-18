@@ -18,7 +18,7 @@ export interface WorkPermit {
 }
 
 export interface TimelineItem {
-  timelineType: 'work' | 'education';
+  timelinetype: 'work' | 'education';
   name: string;
   title: string;
   techStack: string;
