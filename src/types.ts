@@ -6,50 +6,50 @@ export interface ProfileBanner {
   resumeLink: {
     url: string;
   };
-  linkedinlink: string;
+  linkedinLink: string;
   profileSummary: string;
 }
 
-export interface workpermit {
-  visastatus: string;
-  expirydate: Date;
+export interface WorkPermit {
+  visaStatus: string;
+  expiryDate: Date;
   summary: string;
-  additionalinfo: string;
+  additionalInfo: string;
 }
 
 export interface TimelineItem {
-  timelinetype: 'work' | 'education';
+  timelineType: 'work' | 'education';
   name: string;
   title: string;
-  techstack: string;
-  summarypoints: string;
-  daterange: string;
+  techStack: string;
+  summaryPoints: string[];
+  dateRange: string;
 }
 
 export interface Project {
   title: string;
   description: string;
-  techused: string;
+  techUsed: string;
   image: { url: string };
 }
 
 export interface Certification {
   title: string;
   issuer: string;
-  issueddate: string;
+  issuedDate: string;
   link: string;
-  iconname: string;
+  iconName: string;
 }
 
 export interface ContactMe {
-  profilepicture: { url: string };
+  profilePicture: { url: string };
   name: string;
   title: string;
   summary: string;
-  companyuniversity: string;
-  linkedinlink: string;
+  companyUniversity: string;
+  linkedinLink: string;
   email: string;
-  phonenumber: string;
+  phoneNumber: string;
 }
 
 export interface Skill { 
