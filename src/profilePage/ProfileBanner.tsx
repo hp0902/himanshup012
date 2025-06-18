@@ -25,7 +25,7 @@ const ProfileBanner: React.FC = () => {
   };
 
   const handleLinkedinClick = () => { 
-    window.open(bannerData.linkedinlink, '_blank');
+    window.open(bannerData.linkedinLink, '_blank');
   }
 
   return (
