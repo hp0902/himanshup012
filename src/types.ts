@@ -10,7 +10,7 @@ export interface ProfileBanner {
   profileSummary: string;
 }
 
-export interface workPermit {
+export interface WorkPermit {
   visaStatus: string;
   expiryDate: Date;
   summary: string;
