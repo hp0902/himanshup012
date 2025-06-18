@@ -1,28 +1,21 @@
 // getDatoCmsToken.ts
 
 export const getDatoCmsToken = (): string => {
-  const hostname = window.location.hostname;
+  // Get the environment from the environment variables
+  const environment = process.env.NODE_ENV || 'development'; // default to development if not set
 
-  switch (hostname) {
-    case 'ror.sumanthsamala.com':
-    case 'sumanthsamala.com':
-    case 'ror.localhost':
-    case 'localhost':
-      return process.env.REACT_APP_DATOCMS_ROR_TOKEN ?? '';
+  // Check the environment and return the appropriate token
+  switch (environment) {
+    case 'production':
+      return process.env.REACT_APP_DATOCMS_PROD_TOKEN ?? '';
 
-    case 'java.sumanthsamala.com':
-    case 'java.localhost':
-      return process.env.REACT_APP_DATOCMS_JAVA_TOKEN ?? '';
+    case 'staging':
+      return process.env.REACT_APP_DATOCMS_STAGING_TOKEN ?? '';
 
-    case 'frontend.sumanthsamala.com':
-    case 'frontend.localhost':
-      return process.env.REACT_APP_DATOCMS_FRONTEND_TOKEN ?? '';
-
-    case 'node.sumanthsamala.com':
-    case 'node.localhost':
-      return process.env.REACT_APP_DATOCMS_NODE_TOKEN ?? '';
+    case 'development':
+      return process.env.REACT_APP_DATOCMS_DEV_TOKEN ?? '';
 
     default:
-      throw new Error(`No DatoCMS token configured for hostname: ${hostname}`);
+      throw new Error(`No DatoCMS token configured for environment: ${environment}`);
   }
 };
