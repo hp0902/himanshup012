@@ -30,9 +30,9 @@ export const getDatoCmsToken = (): string => {
     case 'production':
       token = process.env.REACT_APP_DATOCMS_PROD_TOKEN ?? ''; // Use production token
       break;
-//    case 'staging':
-     // token = process.env.REACT_APP_DATOCMS_STAGING_TOKEN ?? ''; // Use staging token
-   //   break;
+   case 'staging':
+      token = process.env.REACT_APP_DATOCMS_STAGING_TOKEN ?? ''; // Use staging token
+      break;
  //   case 'development':
   //    token = process.env.REACT_APP_DATOCMS_DEV_TOKEN ?? ''; // Use development token
    //   break;
