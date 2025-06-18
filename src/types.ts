@@ -21,7 +21,7 @@ export interface TimelineItem {
   timelinetype: 'work' | 'education';
   name: string;
   title: string;
-  techStack: string;
+  techstack: string;
   summaryPoints: string[];
   daterange: string;
 }
