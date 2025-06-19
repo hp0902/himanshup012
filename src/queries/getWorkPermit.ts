@@ -6,7 +6,7 @@ import { WorkPermit } from '../types';
     headers: {
       'Authorization': `Bearer YOUR_API_KEY`, // Use your actual API key here
       'Content-Type': 'application/json',
-    },
+    }},
 const GET_WORK_PERMIT = `
   query MyQuery {
   workPermit {
