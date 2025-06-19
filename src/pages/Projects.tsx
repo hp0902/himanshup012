@@ -59,18 +59,18 @@ const techIcons: { [key: string]: JSX.Element } = {
   'JQuery': <SiJquery />,
 };
 
-const Projects: React.FC = () => {
-  const [projects, setProjects] = useState<Project[]>([]);
 
+const Projects: React.FC = () => {
+  const [projects, setProjects] = useState<Project[]>([])
+  
   useEffect(() => { 
     async function fetchProjects() {
-      // This can be replaced with actual API request or your queries
-      const data = await getProjects(); // Assuming you have a method to fetch projects
+      const data = await getProjects();
       setProjects(data);
     }
-
-    fetchProjects();
-  }, []);
+    
+    fetchProjects()
+  }, [])
   
   if (projects.length === 0) return <div>Loading...</div>;
 
@@ -83,16 +83,12 @@ const Projects: React.FC = () => {
             className="project-card"
             style={{ '--delay': `${index * 0.1}s` } as React.CSSProperties}
           >
+            <img src={project.image.url} alt={project.title} className="project-image" />
             <div className="project-details">
               <h3>{project.title}</h3>
-              <div className="project-description">
-                <p><strong>Situation:</strong> {project.Situation}</p>
-                <p><strong>Task:</strong> {project.Task}</p>
-                <p><strong>Action:</strong> {project.Action}</p>
-                <p><strong>Result:</strong> {project.Result}</p>
-              </div>
+              <p>{project.description}</p>
               <div className="tech-used">
-                {project.techused.split(', ').map((tech, i) => (
+                {project.techUsed.split(', ').map((tech, i) => (
                   <span key={i} className="tech-badge">
                     {techIcons[tech] || "🔧"} {tech}
                   </span>
