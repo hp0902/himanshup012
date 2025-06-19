@@ -7,7 +7,7 @@ const WorkPermit: React.FC = () => {
       <div className="work-permit-card">
         <h2 className="work-permit-headline">🎓 US Citizen</h2>
         <p className="work-permit-summary">
-          I'm a US Citizen 🌟
+          I am a US Citizen 🌟
         </p>
       </div>
     </div>
