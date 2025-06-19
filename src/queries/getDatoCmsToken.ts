@@ -9,7 +9,7 @@ export const getDatoCmsToken = (): string => {
 
   // Token fetching based on hostname
   switch (hostname) {
-    case 'ror.sumanthsamala.com':
+  /*  case 'ror.sumanthsamala.com':
     case 'sumanthsamala.com':
     case 'ror.localhost':
     case 'localhost':
@@ -33,7 +33,7 @@ export const getDatoCmsToken = (): string => {
     case 'node.localhost':
       const nodeToken = process.env.REACT_APP_DATOCMS_NODE_TOKEN ?? defaultToken;
       console.log("Using Node Token:", nodeToken);
-      return nodeToken;
+*/      return nodeToken;
 
     case 'himanshup012.onrender.com':  // Add this line for your Render hostname
       const renderToken = process.env.REACT_APP_DATOCMS_RENDER_TOKEN ?? defaultToken;
