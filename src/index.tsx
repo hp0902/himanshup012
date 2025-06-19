@@ -10,9 +10,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import './index.css'; // Optional: Include your global styles here if necessary
 
 //ReactDOM.render(<App />, document.getElementById('root'));
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(<App />);
 /*root.render(
   <Router>
