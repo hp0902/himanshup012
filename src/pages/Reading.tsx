@@ -3,11 +3,11 @@ import './Reading.css';
 // Add images for the new books if you have them
 import atomicHabits from '../images/atomic_habits.jpg';
 import richDadPoorDad from '../images/rich_dad_poor_dad.jpg';
-import thinkAgain from '../images/think_again.jpg'; // Add this image path
-import hiddenPotential from '../images/hidden_potential.jpg'; // Add this image path
-import startWithWhy from '../images/start_with_why.jpg'; // Add this image path
-import leadersEatLast from '../images/leaders_eat_last.jpg'; // Add this image path
-import infiniteGame from '../images/infinite_game.jpg'; // Add this image path
+import thinkAgain from '../images/thinkAgain.jpg'; // Add this image path
+import hiddenPotential from '../images/hiddenPotential.jpg'; // Add this image path
+import startWithWhy from '../images/startWithWhy.jpg'; // Add this image path
+import leadersEatLast from '../images/leadersEatLast.jpg'; // Add this image path
+import infiniteGame from '../images/infiniteGame.jpg'; // Add this image path
 
 const books = [
   {
