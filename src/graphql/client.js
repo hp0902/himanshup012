@@ -1,15 +1,15 @@
 import { GraphQLClient } from 'graphql-request';
-{
-  profilebanner {
-    backgroundImage {
-      url
+const query = `
+  {
+    profilebanner {
+      backgroundImage {
+        url
+      }
+      headline
+      resumeLink
+      linkedinLink
+      profileSummary
     }
-    headline
-    resumeLink {
-      url
-    }
-    linkedinLink
-    profileSummary
   }
-}
+`;
 const endpoint
