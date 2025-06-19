@@ -39,7 +39,7 @@ export interface Project {
   Task: string;
   Action: string;
   Result: string;
-  techused: string;
+  //techused: string;
 }
 
 export interface Certification {
