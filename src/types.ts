@@ -33,6 +33,15 @@ export interface Project {
   image: { url: string };
 }
 
+export interface Project {
+  title: string;
+  Situation: string;
+  Task: string;
+  Action: string;
+  Result: string;
+  techused: string;
+}
+
 export interface Certification {
   title: string;
   issuer: string;
