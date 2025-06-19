@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NetflixTitle from './NetflixTitle';
 import ProfilePage from './profilePage/profilePage';
 import Browse from './browse/browse';
