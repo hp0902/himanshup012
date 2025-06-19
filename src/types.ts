@@ -26,12 +26,12 @@ export interface TimelineItem {
   daterange: string;
 }
 
-//export interface Project {
-//  title: string;
- // description: string;
-//  techused: string;
- // image: { url: string };
-//}
+export interface Project {
+ title: string;
+ description: string;
+ techused: string;
+ image: { url: string };
+}
 
 export interface Project {
   title: string;
