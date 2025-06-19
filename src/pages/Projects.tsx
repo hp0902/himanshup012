@@ -86,10 +86,10 @@ const Projects: React.FC = () => {
             <div className="project-details">
               <h3>{project.title}</h3>
               <div className="project-description">
-                <p><strong>Situation:</strong> {project.situation}</p>
-                <p><strong>Task:</strong> {project.task}</p>
-                <p><strong>Action:</strong> {project.action}</p>
-                <p><strong>Result:</strong> {project.result}</p>
+                <p><strong>Situation:</strong> {project.Situation}</p>
+                <p><strong>Task:</strong> {project.Task}</p>
+                <p><strong>Action:</strong> {project.Action}</p>
+                <p><strong>Result:</strong> {project.Result}</p>
               </div>
               <div className="tech-used">
                 {project.techused.split(', ').map((tech, i) => (
