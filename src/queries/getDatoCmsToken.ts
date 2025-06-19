@@ -5,7 +5,7 @@ export const getDatoCmsToken = (): string => {
   console.log("Current hostname:", hostname);
 
   // Use a default token for debugging
-  const defaultToken = "your_default_token_here"; // Replace with a valid token for testing
+  const defaultToken = "8ddfa684505af65a7a6e30a2e35e76"; // Replace with a valid token for testing
 
   // Token fetching based on hostname
   switch (hostname) {
