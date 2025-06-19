@@ -88,7 +88,7 @@ const Projects: React.FC = () => {
               <h3>{project.title}</h3>
               <p>{project.description}</p>
               <div className="tech-used">
-                {project.techUsed.split(', ').map((tech, i) => (
+                {project.techused.split(', ').map((tech, i) => (
                   <span key={i} className="tech-badge">
                     {techIcons[tech] || "🔧"} {tech}
                   </span>
