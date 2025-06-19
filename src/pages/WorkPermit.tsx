@@ -1,11 +1,29 @@
-import React from 'react';
 
+import React, { useEffect, useState } from 'react';
+import './WorkPermit.css';
+import { getWorkPermit } from '../queries/getWorkPermit';
+import { WorkPermit as IWorkPermit } from '../types';
 const WorkPermit: React.FC = () => {
+
+  const [workPermitData, setWorkPermitData] = useState<IWorkPermit | null>(null);
+  useEffect(() => {
+    async function fetchWorkPermitData() {
+      const data = await getWorkPermit();
+      setWorkPermitData(data);
+    }
+    fetchWorkPermitData();
+  }, []);
+
+  if (!workPermitData) return <div>Loading...</div>;
+
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: '#f4f4f9' }}>
-      <div style={{ padding: '20px', backgroundColor: 'white', borderRadius: '8px', boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)', textAlign: 'center', maxWidth: '400px', width: '100%' }}>
-        <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '10px' }}>🎓 US Citizen</h2>
-        <p style={{ fontSize: '18px', color: '#333' }}>I am a US Citizen 🌟</p>
+    <div className="work-permit-container">
+      <div className="work-permit-card">
+        <h2 className="work-permit-headline">🎓 Work Permit</h2>
+        <p className="work-permit-summary">
+          I'm currently on US Citizen 🌟
+        </p>
+        <p className="additional-info">{workPermitData.additionalInfo}</p>
       </div>
     </div>
   );
