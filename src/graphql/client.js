@@ -1,6 +1,6 @@
 import { GraphQLClient } from 'graphql-request';
 {
-  profile {
+  profilebanner {
     backgroundImage {
       url
     }
