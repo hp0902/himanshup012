@@ -1,50 +1,48 @@
-// Reading.tsx
-
 import React from 'react';
 import './Reading.css';
-import atomicHabits from '../images/atomic_habits.jpg';
-import richDadPoorDad from '../images/rich_dad_poor_dad.jpg';
-import alchemist from '../images/alchemist.jpg';
-import eatThatFrog from '../images/eat_that_frog.jpg';
-import vijayanikiAidhuMetlu from '../images/vijayaniki_aidu_metlu.jpg';
-import venneloAdapilla from '../images/vennelo_adapilla.jpeg';
 
 const books = [
   {
     title: "Atomic Habits",
     author: "James Clear",
-    imgSrc: atomicHabits,
+    imgSrc: "https://jamesclear.com/wp-content/uploads/2018/10/atomic-habits-book-cover.jpg",
     description: "A practical guide to building good habits and breaking bad ones.",
   },
   {
     title: "Rich Dad Poor Dad",
     author: "Robert Kiyosaki",
-    imgSrc: richDadPoorDad,
+    imgSrc: "https://www.richdad.com/sites/default/files/styles/large/public/2020-10/richdadbookcover.jpg?itok=Z3mYh7Wq",
     description: "An eye-opener on wealth, assets, and financial literacy.",
   },
   {
-    title: "The Alchemist",
-    author: "Paulo Coelho",
-    imgSrc: alchemist,
-    description: "A magical journey of following one's dreams.",
+    title: "Think Again",
+    author: "Adam Grant",
+    imgSrc: "https://adamgrant.net/wp-content/uploads/2021/02/ThinkAgain_9781984878106.jpg",
+    description: "A thought-provoking book on the power of rethinking and changing your mind.",
   },
   {
-    title: "Eat That Frog",
-    author: "Brian Tracy",
-    imgSrc: eatThatFrog,
-    description: "A motivational book on overcoming procrastination.",
+    title: "Hidden Potential",
+    author: "Adam Grant",
+    imgSrc: "https://www.penguin.co.nz/sites/default/files/styles/large/public/2023-01/hidden_potential_9780753560068.jpg?itok=F2vD2QfG",
+    description: "A deep dive into discovering and unlocking your hidden potential.",
   },
   {
-    title: "Vijayaniki Aidhu Metlu",
-    author: "Yandamoori Veerendranath",
-    imgSrc: vijayanikiAidhuMetlu,
-    description: "An inspirational Telugu book for personal growth.",
+    title: "Start with Why",
+    author: "Simon Sinek",
+    imgSrc: "https://simonsinek.com/wp-content/uploads/2019/10/StartWithWhy-BookCover.jpg",
+    description: "An insightful look at the importance of understanding the 'why' behind everything.",
   },
   {
-    title: "Vennelo Adapilla",
-    author: "Yandamoori Veerendranath",
-    imgSrc: venneloAdapilla,
-    description: "A classic Telugu romantic novel that touches the heart.",
+    title: "Leaders Eat Last",
+    author: "Simon Sinek",
+    imgSrc: "https://simonsinek.com/wp-content/uploads/2013/10/LeadersEatLast-BookCover.jpg",
+    description: "A book about leadership and creating environments where people feel safe and valued.",
+  },
+  {
+    title: "The Infinite Game",
+    author: "Simon Sinek",
+    imgSrc: "https://simonsinek.com/wp-content/uploads/2019/10/InfiniteGame-BookCover.jpg",
+    description: "A book that explores the idea of playing an infinite game to create long-term success.",
   },
 ];
 
