@@ -7,7 +7,6 @@ import { ProfileBanner as ProfileBannerType } from '../types';
 
 const ProfileBanner: React.FC = () => {
 
-
   const [bannerData, setBannerData] = useState<ProfileBannerType | null>(null);
 
   useEffect(() => {
@@ -21,25 +20,20 @@ const ProfileBanner: React.FC = () => {
   if (!bannerData) return <div>Loading...</div>;
 
   const handlePlayClick = () => {
-    window.open(bannerData.resumeLink.url, '_blank');
+    window.open('https://www.linkedin.com/in/hpatel012', '_blank');
   };
 
   const handleLinkedinClick = () => { 
-    window.open(bannerData.linkedinLink, '_blank');
-  }
+    window.open('https://www.linkedin.com/in/hpatel012', '_blank');
+  };
 
   return (
     <div className="profile-banner">
       <div className="banner-content">
-        <h1 className="banner-headline" id='headline'>{bannerData.headline}</h1>
-        <p className="banner-description">
-          {bannerData.profileSummary}
-        </p>
-
-        <div className="banner-buttons">
-          <PlayButton onClick={handlePlayClick} label="Resume" />
-          <MoreInfoButton onClick={handleLinkedinClick} label="Linkedin" />
-        </div>
+        <h1>{bannerData.name}</h1>
+        <p>{bannerData.description}</p>
+        <PlayButton onClick={handlePlayClick} />
+        <MoreInfoButton onClick={handleLinkedinClick} />
       </div>
     </div>
   );
