@@ -19,22 +19,27 @@ const ProfileBanner: React.FC = () => {
 
   if (!bannerData) return <div>Loading...</div>;
 
+  // Change the handlePlayClick function to open your LinkedIn page
   const handlePlayClick = () => {
     window.open('https://www.linkedin.com/in/hpatel012', '_blank');
   };
 
   const handleLinkedinClick = () => { 
     window.open('https://www.linkedin.com/in/hpatel012', '_blank');
-  };
+  }
 
   return (
     <div className="profile-banner">
       <div className="banner-content">
-        {/* Replace 'name' and 'description' with the actual properties of 'bannerData' */}
-        <h1>{bannerData.someProperty}</h1> {/* Replace 'someProperty' with the correct property */}
-        <p>{bannerData.anotherProperty}</p> {/* Replace 'anotherProperty' with the correct property */}
-        <PlayButton onClick={handlePlayClick} />
-        <MoreInfoButton onClick={handleLinkedinClick} />
+        <h1 className="banner-headline" id='headline'>{bannerData.headline}</h1>
+        <p className="banner-description">
+          {bannerData.profileSummary}
+        </p>
+
+        <div className="banner-buttons">
+          <PlayButton onClick={handlePlayClick} label="LinkedIn" />
+          <MoreInfoButton onClick={handleLinkedinClick} label="More Info" />
+        </div>
       </div>
     </div>
   );
