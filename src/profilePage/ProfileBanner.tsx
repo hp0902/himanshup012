@@ -30,8 +30,9 @@ const ProfileBanner: React.FC = () => {
   return (
     <div className="profile-banner">
       <div className="banner-content">
-        <h1>{bannerData.name}</h1>
-        <p>{bannerData.description}</p>
+        {/* Replace 'name' and 'description' with the actual properties of 'bannerData' */}
+        <h1>{bannerData.someProperty}</h1> {/* Replace 'someProperty' with the correct property */}
+        <p>{bannerData.anotherProperty}</p> {/* Replace 'anotherProperty' with the correct property */}
         <PlayButton onClick={handlePlayClick} />
         <MoreInfoButton onClick={handleLinkedinClick} />
       </div>
