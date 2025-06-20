@@ -10,11 +10,10 @@ export const getDatoCmsToken = (): string => {
   // Token fetching based on hostname
   switch (hostname) {
     case 'himanshup012.onrender.com':  // Add this line for your Render hostname
+      case 'himanshup.info': 
       const renderToken = process.env.REACT_APP_DATOCMS_RENDER_TOKEN ?? defaultToken;
       console.log("Using Render Token:", renderToken);
-         case 'himanshup.info':  // Add this line for your Render hostname
-      const renderToken = process.env.REACT_APP_DATOCMS_RENDER_TOKEN ?? defaultToken;
-      console.log("Using Render Token:", renderToken);
+        
       
       return renderToken;  // Return the correct token
 
